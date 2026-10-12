@@ -9,5 +9,5 @@ read user
 
 echo -n "enter password here is:"
 read -s pass
-
+echo
 echo "Username is:$user"
