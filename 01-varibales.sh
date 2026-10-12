@@ -10,4 +10,4 @@ read user
 echo -n "enter password here is:"
 read -s pass
 
-echo "Username is:$user"
+echo -n "Username is:$user"
