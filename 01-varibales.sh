@@ -4,10 +4,10 @@
 # echo "Hi this is first shell script"
 
 
-echo "enter username:"
+echo -n "enter username:"
 read user
 
-echo "enter password:"
+echo -n "enter password here is:"
 read -s pass
 
-echo "Username is:$user and Password is:$pass"
+echo "Username is:$user"
