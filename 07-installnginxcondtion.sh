@@ -8,4 +8,8 @@ if [ $user_id -ne 0 ]; then
 fi
 
 echo "Proceeding ......"
-dnf install nginx -y
+dnf install nginssssx -y
+
+dnf mysqlkkd -y
+
+echo "end process"
