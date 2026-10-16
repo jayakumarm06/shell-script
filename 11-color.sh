@@ -37,13 +37,11 @@ for package in $@
 do
     dnf list installed $package &>> $logs_file
     if [ $? -ne 0 ]; then
-        echo -e "already installed ${package}----${Y}SKIPPING${N}"
-
-    else 
         echo "going to install:${package}"
         dnf install $package -y &>> $logs_file
         validate $? "$package Installtion"
-        
+    else
+        echo -e "already installed ${package}----${Y}SKIPPING${N}"
     fi
 
 done
