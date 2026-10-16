@@ -30,7 +30,7 @@ dnf install nginx -y &>>log_file
 validate $? "Nginx Installtion"
 
 
-dnf install mysql -y &>>log_file
+dnf install mysqlss -y &>>log_file
 
 validate $? "mysql Installtion"
 
