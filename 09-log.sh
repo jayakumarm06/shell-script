@@ -1,7 +1,7 @@
 #!/bin/bash
 
 user_id=$(id -u)
-log_folder="/var/log/shell-practice/"
+log_folder="/var/log/shell-practice"
 log_file="${log_folder}/${0}.log"
 
 
@@ -11,7 +11,7 @@ if [ $user_id -ne 0 ]; then
     exit 1
 fi
 
-mkdir -p $log_folder
+sudo mkdir -p $log_folder
 
 
 
