@@ -4,33 +4,36 @@ user_id=$(id -u)
 log_folder="/var/log/shell-practice"
 log_file="${log_folder}/${0}.log"
 
+
 if [ $user_id -ne 0 ]; then
     echo "Plse choose sudo access to.."
     exit 1
 fi
 
+
 mkdir -p $log_folder
 
-validate(){
+
+# validate(){
 
 
-if  [ $1 -ne 0 ]; then
-    echo "${2}...FAILED" 
-    exit 1
-else
-    echo "${2}...SUCCESS" 
-fi
+# if  [ $1 -ne 0 ]; then
+#     echo "${2}...FAILED" 
+#     exit 1
+# else
+#     echo "${2}...SUCCESS" 
+# fi
 
 
-}
+# }
 
 
-dnf install nginx -y &>> log_file
+# dnf install nginx -y &>> log_file
 
-validate $? "Nginx Installtion"
+# validate $? "Nginx Installtion"
 
 
-dnf install mysqlss -y &>> log_file
+# dnf install mysqlss -y &>> log_file
 
-validate $? "mysql Installtion"
+# validate $? "mysql Installtion"
 
