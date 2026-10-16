@@ -13,7 +13,7 @@ if [ $user_id -ne 0 ]; then
 fi
 
 mkdir -p $logs_folder
-touch "$logs_file"
+# touch "$logs_file"
 
 
 
