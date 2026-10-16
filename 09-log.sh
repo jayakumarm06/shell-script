@@ -11,7 +11,7 @@ if [ $user_id -ne 0 ]; then
     exit 1
 fi
 
-sudo mkdir -p $log_folder
+sudo mkdir -p ${log_folder}
 echo "Exit Code: $?"
 
 
