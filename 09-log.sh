@@ -2,17 +2,18 @@
 
 user_id=$(id -u)
 logs_folder="/var/log/shell-practice"
+mkdir -p "$logs_folder"
 logs_file="${logs_folder}/${0}.log"
 
 
 
-if [ $user_id -ne 0 ]; then
-    echo "Plse choose sudo access to.."
-    exit 1
-fi
+# if [ $user_id -ne 0 ]; then
+#     echo "Plse choose sudo access to.."
+#     exit 1
+# fi
 
-mkdir -p "$logs_folder"
-touch "$log_file"
+# mkdir -p "$logs_folder"
+
 echo "Exit Code: $?"
 
 
