@@ -20,10 +20,10 @@ validate(){
 
 
 if  [ $1 -ne 0 ]; then
-    echo "${2}...FAILED" 
+    echo "${2}...FAILED" | tee -a $logs_file
     exit 1
 else
-    echo "${2}...SUCCESS" 
+    echo "${2}...SUCCESS" | tee -a $logs_file
 fi
 
 
