@@ -12,6 +12,7 @@ if [ $user_id -ne 0 ]; then
 fi
 
 sudo mkdir -p $log_folder
+echo "Exit Code: $?"
 
 
 
