@@ -36,6 +36,7 @@ fi
 for package in $@
 do
     dnf list installed $package &>> $logs_file
+    # echo "Exit code: $?"
     if [ $? -ne 0 ]; then
         echo "going to install:${package}"
         dnf install $package -y &>> $logs_file
