@@ -13,10 +13,8 @@ if [ $user_id -ne 0 ]; then
 fi
 
 mkdir -p $logs_folder
-# touch "$logs_file"
 
-
-
+echo "script started execution at $(date +"%F %T")"
 
 validate(){
 
@@ -41,3 +39,4 @@ dnf install mysqlss -y &>> $logs_file
 
 validate $? "mysql Installtion"
 
+echo "script started completed at $(date +"%F %T")"
