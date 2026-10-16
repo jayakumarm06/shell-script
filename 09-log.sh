@@ -14,7 +14,7 @@ fi
 
 mkdir -p $logs_folder
 
-echo "script started execution at $(date +"%F %T")"
+echo "script started execution at $(date +"%F %T")" &>> $logs_file
 
 validate(){
 
@@ -39,4 +39,4 @@ dnf install mysqlss -y &>> $logs_file
 
 validate $? "mysql Installtion"
 
-echo "script started completed at $(date +"%F %T")"
+echo "script started completed at $(date +"%F %T")" &>> $logs_file
