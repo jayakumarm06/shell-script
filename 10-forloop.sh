@@ -31,13 +31,14 @@ fi
 
 for package in $@
 do
-  dnf list installed $package &>> $logs_file
-  if [ $? -ne 0 ]; then
-    echo "going to install:${package}"
-    dnf install $package -y &>> $logs_file
-    validate $? "$package Installtion"
-  else
-    echo "already installed ${package}----SKIPPING"
+    dnf list installed $package &>> $logs_file
+    if [ $? -ne 0 ]; then
+        echo "going to install:${package}"
+        dnf install $package -y &>> $logs_file
+        validate $? "$package Installtion"
+    else
+        echo "already installed ${package}----SKIPPING"
+    fi
 
 done
 
