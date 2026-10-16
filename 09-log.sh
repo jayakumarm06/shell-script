@@ -2,7 +2,7 @@
 
 user_id=$(id -u)
 log_folder="/var/log/shell-practice"
-log_file="${log_folder}/${$0}.log"
+log_file="${log_folder}/$0.log"
 
 
 
