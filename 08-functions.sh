@@ -29,4 +29,3 @@ dnf install mysql -y
 
 validate $? "mysql Installtion"
 
-echo "still proceeding"
