@@ -32,12 +32,12 @@ fi
 }
 
 
-dnf install nginx -y &>> log_file
+dnf install nginx -y &>> logs_file
 
 validate $? "Nginx Installtion"
 
 
-dnf install mysqlss -y &>> log_file
+dnf install mysqlss -y &>> logs_file
 
 validate $? "mysql Installtion"
 
