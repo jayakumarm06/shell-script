@@ -49,7 +49,6 @@ timestamp=$(date +%Y-%m-%d-%H-%M-%S)
 file_name="$dest_dir/logs-$timestamp.tar.gz"
 
 tar -czf $file_name $files_archive
-
 if [ $? -ne 0 ]; then
     echo "logs archive is failed"
     exit 1
