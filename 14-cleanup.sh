@@ -19,6 +19,6 @@ usage(){
 
 if [ ! -d "$source_dir" ]; then
 
-    echo "${R}ERROR:: $0  doesnt exit${N}"
-    
+    echo -e "${R}ERROR:: $source_dir  doesnt exit${N}"
+
 fi
