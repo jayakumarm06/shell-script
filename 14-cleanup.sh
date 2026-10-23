@@ -31,7 +31,7 @@ if [ ! -d "$source_dir" ]; then
 
 fi
 
-echo "Scannig files older than $days to delted in $source_dir"
+# echo "Scannig files older than $days to delted in $source_dir"
 files_delete=$(find $source_dir -name "*.log" -type f -mtime +$days)
 
 
