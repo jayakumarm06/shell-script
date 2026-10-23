@@ -36,7 +36,7 @@ files_delete=$(find $source_dir -name "*.log" -type f -mtime +$days)
 
 
 if [ -z "$files_delete" ]; then
-    echo -e "'${R}No log files founs older${N}' than $days days"
+    echo -e "No log files founs older than $days days"
     exit 0
 
 fi
