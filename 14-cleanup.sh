@@ -17,6 +17,8 @@ usage(){
 
 #first check the dir exist or not
 
-if [ ! -d "$source_dir" ]: then
+if [ ! -d "$source_dir" ]; then
+
     echo "${R}ERROR:: $0  doesnt exit${N}"
+    
 fi
