@@ -30,3 +30,12 @@ if [ ! -d "$source_dir" ]; then
     echo -e "${R}ERROR:: $source_dir  doesnt exit${N}"
 
 fi
+
+echo "Scannig files older than $days to delted in $source_dir"
+files_delete=$(find $source_dir -name "*.log" -type f -mtime +$days)
+
+
+if [ -z "$files_delete"]; then
+    echo "No log files founs older than $days days"
+    exit 0
+fi
