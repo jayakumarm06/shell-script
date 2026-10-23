@@ -23,14 +23,14 @@ if [ -z "$source_dir" ] || [ -z "$dest_dir" ]; then
 
 fi
 
-if [ ! -d "$source_dir"];then
+if [ ! -d "$source_dir" ];then
  
-  echo "source directory:  $source_dir does not exist"
+  echo "source directory:$source_dir does not exist"
 
 fi 
-if [ ! -d "$dest_dir"];then
+if [ ! -d "$dest_dir" ];then
  
-  echo "destination directory:  $dest_dir does not exist"
+  echo "destination directory:$dest_dir does not exist"
 
 fi 
 
