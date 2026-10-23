@@ -23,10 +23,10 @@ if [ -z "$source_dir" ]; then
 
 fi
 
-# #first check the dir exist or not
+#first check the dir exist or not
 
-# if [ ! -d "$source_dir" ]; then
+if [ ! -d "$source_dir" ]; then
 
-#     echo -e "${R}ERROR:: $source_dir  doesnt exit${N}"
+    echo -e "${R}ERROR:: $source_dir  doesnt exit${N}"
 
-# fi
+fi
