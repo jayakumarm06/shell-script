@@ -44,8 +44,9 @@ fi
 while IFS= read -r line 
 do
    echo "File is going to be deleted: $line"
-#    rm -f $line
-done <<< $files_delete
+   rm -f $line
+   echo "file deleted: $line"
+done <<< "$files_delete"
 
 #< -> for file input
 #<<< -->if output read 
