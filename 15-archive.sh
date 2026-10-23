@@ -34,4 +34,12 @@ if [ ! -d "$dest_dir" ];then
 
 fi 
 
+echo "Scannig files older than $days to delted in $source_dir"
+files_archive=$(find $source_dir -name "*.log" -type f -mtime +$days)
 
+
+if [ -z "$files_archive" ]; then
+    echo -e "No log files founs older than $days days"
+    exit 0
+
+fi
