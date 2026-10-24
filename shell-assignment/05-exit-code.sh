@@ -41,4 +41,3 @@ if ping -c 1 google.com &> /dev/null; then
 else
     echo "Failure: Could not reach Google. Check your internet connection."
 fi
-pin
