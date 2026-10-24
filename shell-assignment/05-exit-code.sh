@@ -18,7 +18,7 @@ validate(){
         echo -e "${2}... ${R}[FAILURE]${N}"
         exit 1
     else
-        echo -e "${2} .... ${R}[SUCCEED]${N}"
+        echo -e "${2} .... ${G}[SUCCEED]${N}"
     fi
 
 }
