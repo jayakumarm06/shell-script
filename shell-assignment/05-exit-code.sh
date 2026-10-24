@@ -29,7 +29,7 @@ validate $? "ls /tmp and checks if it.."
 ls /fakedir
 validate $? "ls /fakedir and checks if it.."
 
-ping -c 1 google.com 
+ping -c1 google.com 
 validate $? "Host"
 
 echo $?
