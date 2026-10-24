@@ -2,7 +2,7 @@
 
 day=$(date "+%A")
 
-if [ "$day" -eq "Saturday" ] || [ "$day" -eq "Sunday" ];
+if [ "$day" -eq "Saturday" ] OR [ "$day" -eq "Sunday" ];
 then
     echo "Weekend! Enjoy your holiday."
 
