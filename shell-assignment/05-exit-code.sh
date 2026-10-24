@@ -36,3 +36,4 @@ then
     echo "Host is Reachable"
 else
     echo "Host is not Reachable"
+fi
