@@ -25,3 +25,6 @@ validate(){
 
 ls /tmp
 validate $? "ls /tmp and checks if it.."
+
+ls /fakedir
+validate $? "ls /tmp and checks if it.."
