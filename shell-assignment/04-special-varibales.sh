@@ -14,3 +14,6 @@ echo "the home directory:$HOME"
 echo "PID of the script:$$"
 sleep 10 &
 echo "the background and print its PID:$!"
+num=$(($RANDOM % 100 ))
+
+echo "random number between 1–100:$num"
