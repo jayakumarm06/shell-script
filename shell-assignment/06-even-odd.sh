@@ -2,7 +2,7 @@
 
 
 num=$1
-if [ $1 % 2 == 0 ]; then
+if [ $(($1 % 2)) -eq 0 ]; then
     echo "even"
 else
     echo "odd"
