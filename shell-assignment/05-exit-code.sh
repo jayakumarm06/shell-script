@@ -1,5 +1,6 @@
 #!/bin/bash
-
+logs_folder="/var/log/shell-assigment"
+logs_file="${logs_folder}/${0}.log"
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
@@ -11,7 +12,7 @@ N="\e[0m"
 # At the end, exit the script with code 0 if all commands succeeded, or 1 if any failed
 
 
-
+mkdir -p $logs_folder 
 validate(){
 
     if [ $1 -ne 0 ]; then
@@ -30,5 +31,5 @@ ls /fakedir
 validate $? "ls /fakedir and checks if it.."
 
 
-ping -c1 google.com
+ping -c1 google.com &>>  $logs_file
 validate $? "Host.."
