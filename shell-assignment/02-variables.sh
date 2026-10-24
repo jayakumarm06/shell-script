@@ -13,4 +13,5 @@ age2=60
 city="vijayawada"
 
 echo "My name is $name, Iam $age years old and I live in $city"
-echo "Years until $age2: "$(($age2-$age))" 
+years="$(($age2-$age))"
+echo "Years until $age2:$years
