@@ -36,5 +36,5 @@ validate $? "ls /fakedir and checks if it.."
 #     echo "host is not reachable"
 # fi
 
-pin=ping -c1 google.com
+pin=$(ping -c1 google.com)
 echo "$pin"
