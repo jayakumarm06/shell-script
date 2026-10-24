@@ -38,5 +38,5 @@ validate $? "ls /tmp and checks if it.."
 ls /fakedir
 validate $? "ls /fakedir and checks if it.."
 
-reac=ping -c1 google.com
+ping -c1 google.com
 validate1 $? "Host "
