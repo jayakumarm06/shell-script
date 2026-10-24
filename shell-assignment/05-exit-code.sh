@@ -31,5 +31,8 @@ ls /fakedir
 validate $? "ls /fakedir and checks if it.."
 
 
-ping -c1 google.com &>>  $logs_file
-validate $? "Host.."
+if ping -c1 google.com &>>  $logs_file;
+then
+    echo "Host is Reachable"
+else
+    echo "Host is not Reachable"
