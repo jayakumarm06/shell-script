@@ -8,4 +8,4 @@ username=$1
 country=$2
 
 echo "User :$1 is from $2"
-echo "total number of arguments passed:$*"
+echo "total number of arguments passed:$@"
