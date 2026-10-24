@@ -38,3 +38,4 @@ validate $? "ls /fakedir and checks if it.."
 
 pin=$(ping -c1 google.com)
 echo "$pin"
+echo $?
