@@ -21,4 +21,4 @@ validate(){
 }
 
 ls /tmp
-validate $? "ls /tmp and checks if it succeeded/failure"
+validate $? "ls /tmp and checks if it.."
