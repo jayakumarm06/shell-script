@@ -14,6 +14,6 @@ echo "the home directory:$HOME"
 echo "PID of the script:$$"
 sleep 10 &
 echo "the background and print its PID:$!"
-num=$(($RANDOM % 100 ))
-
+num=$(($RANDOM % 100 + 1))
 echo "random number between 1–100:$num"
+echo "At the end, print how many seconds the script took to run: $SECONDS seconds"
