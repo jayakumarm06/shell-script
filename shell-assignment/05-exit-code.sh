@@ -36,8 +36,14 @@ validate $? "ls /fakedir and checks if it.."
 #     echo "host is not reachable"
 # fi
 
-if ping -c 1 google.com &> /dev/null; then
-    echo "Success: Internet connection is active."
+ping -c 1 google.com &> /dev/null
+EXIT_CODE=$?
+
+# Check the result and print the message
+if [ $EXIT_CODE -eq 0 ]; then
+    echo "Host reachable"
+    exit 0
 else
-    echo "Failure: Could not reach Google. Check your internet connection."
+    echo "Host not reachable"
+    exit 1
 fi
