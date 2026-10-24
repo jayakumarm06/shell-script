@@ -29,7 +29,11 @@ validate $? "ls /tmp and checks if it.."
 ls /fakedir
 validate $? "ls /fakedir and checks if it.."
 
-ping -c1 google.com 
-validate $? "Host"
+if ping -c1 google.com &> /dev/null;
+then
+    echo "host is reachable"
+else
+    echo "host is not reachable"
+fi
 
-echo $?
+pin
