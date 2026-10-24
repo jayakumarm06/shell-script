@@ -1,8 +1,8 @@
 #!/bin/bash
 
 day=$(date "+%A")
-
-if [ "$day" -eq "Saturday" ] OR [ "$day" -eq "Sunday" ];
+echo $day
+if [ "$day" -eq "Saturday" ] || [ "$day" -eq "Sunday" ];
 then
     echo "Weekend! Enjoy your holiday."
 
@@ -13,3 +13,4 @@ else
     echo "Weekday. Go to school/work"
 fi
 
+echo "END"
