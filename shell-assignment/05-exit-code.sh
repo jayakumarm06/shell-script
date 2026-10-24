@@ -29,11 +29,16 @@ validate $? "ls /tmp and checks if it.."
 ls /fakedir
 validate $? "ls /fakedir and checks if it.."
 
-if ping -c1 google.com &> /dev/null;
-then
-    echo "host is reachable"
-else
-    echo "host is not reachable"
-fi
+# if ping -c1 google.com &> /dev/null;
+# then
+#     echo "host is reachable"
+# else
+#     echo "host is not reachable"
+# fi
 
+if ping -c 1 google.com &> /dev/null; then
+    echo "Success: Internet connection is active."
+else
+    echo "Failure: Could not reach Google. Check your internet connection."
+fi
 pin
