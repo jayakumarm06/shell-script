@@ -14,9 +14,9 @@ N="\e[0m"
 validate(){
 
     if [ $1 -ne 0 ]; then
-        echo -e "${2}... [FAILURE]"
+        echo -e "${2}... ${R}[FAILURE]${N}"
     else
-        echo -e "${2} .... [SUCCEED]"
+        echo -e "${2} .... ${R}[SUCCEED]${N}"
     fi
 
 }
