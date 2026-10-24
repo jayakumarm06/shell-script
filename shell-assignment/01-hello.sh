@@ -8,4 +8,6 @@
 echo "Hello,World!"
 
 
-echo "Current date and time :$(date)"
+echo "Current date and time :$date"
+
+echo "NAme of the user running the script: $USER"
