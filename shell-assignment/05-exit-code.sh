@@ -29,21 +29,6 @@ validate $? "ls /tmp and checks if it.."
 ls /fakedir
 validate $? "ls /fakedir and checks if it.."
 
-# if ping -c1 google.com &> /dev/null;
-# then
-#     echo "host is reachable"
-# else
-#     echo "host is not reachable"
-# fi
 
-ping -c 1 google.com &> /dev/null
-EXIT_CODE=$?
-
-# Check the result and print the message
-if [ $EXIT_CODE -eq 0 ]; then
-    echo "Host reachable"
-    exit 0
-else
-    echo "Host not reachable"
-    exit 1
-fi
+ping -c1 google.com
+echo $?
