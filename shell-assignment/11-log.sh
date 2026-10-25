@@ -15,17 +15,16 @@ if [ "$user_id" -ne  0 ]; then
 
 fi 
 
-touch $success_logs_file 
-touch $error_logs_file
+touch $success_logs_file $error_logs_file
 
 # mkdir -p $success_folder_log 
 validate(){
 
     if [ $1 -ne 0 ]; then
-        echo -e "${2}... ${R}[FAILURE]${N}"
+        echo -e "${2}... ${R}[FAILURE]${N}" 2>> $error_logs_file
         # exit 1
     else
-        echo -e "${2} .... ${G}[SUCCEED]${N}"
+        echo -e "${2} .... ${G}[SUCCEED]${N}" 1>> $success_logs_file
     fi
 
 }
@@ -33,10 +32,11 @@ validate(){
 ls /tmp 
 if [ $? -ne 0 ]; then
     echo "failed" 
-    validate $? "[error] go and search error-script.log"
+    validate $? "failure go and search error-script.log"
+    exit 1
 else
     echo "success" 
-    validate $? "[error] go and search script.log"
+    validate $? "success go and search script.log"
 fi
 
 # ls /fakedir
