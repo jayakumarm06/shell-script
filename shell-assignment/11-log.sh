@@ -29,14 +29,12 @@ validate(){
 
 }
 
-ls /tmpp
-if [ $? -ne 0 ]; then
-    validate $? "failure go and search error-script.log"
-    
-else
+ls /tmp
+validate $? "failure go and search error-script.log"
+   
 
-    validate $? "success go and search script.log"
-fi
+
+  
 
 # ls /fakedir
 # validate $? "ls /fakedir and checks if it.."
