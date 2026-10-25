@@ -21,10 +21,10 @@ touch $success_logs_file $error_logs_file
 validate(){
 
     if [ $1 -ne 0 ]; then
-        echo -e "${2}... ${R}[FAILURE]${N}"
+        echo -e "${2}... ${R}[FAILURE]${N}and passed to thsi folder $error_logs_file" 
         # exit 1
     else
-        echo -e "${2} .... ${G}[SUCCEED]${N}" 
+        echo -e "${2} .... ${G}[SUCCEED]${N} and passed to thsi folder $success_logs_file" 
     fi
 
 }
