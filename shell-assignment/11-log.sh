@@ -21,15 +21,15 @@ touch $success_logs_file $error_logs_file
 validate(){
 
     if [ $1 -ne 0 ]; then
-        echo -e "${2}... ${R}[FAILURE]${N}" 2>> $error_logs_file
-        # exit 1
+        echo -e "${2}... ${R}[FAILURE]${N}"
+        exit 1
     else
-        echo -e "${2} .... ${G}[SUCCEED]${N}" 1>> $success_logs_file
+        echo -e "${2} .... ${G}[SUCCEED]${N}" 
     fi
 
 }
 
-ls /tmpp &>> $success_logs_file
+ls /tmpp 1>> $success_logs_file 2>> $error_logs_file
 validate $? "search .log folder"
    
 
