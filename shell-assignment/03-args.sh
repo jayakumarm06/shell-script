@@ -10,5 +10,5 @@ country=$2
 echo "User :$1 is from $2"
 echo "total number of arguments passed:$#"
 echo "all the arguments passed:$@"
-echo "number of the arguments passed:$#"
+echo "number of the arguments passed to the script:$*"
 echo "script name:$0"
