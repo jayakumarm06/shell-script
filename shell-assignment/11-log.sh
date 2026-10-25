@@ -29,7 +29,7 @@ touch $success_logs_file $error_logs_file
 
 # }
 
-ls /tmp  
+ls /tmpp  
 if [ $? -ne 0 ]; then
     echo "failed"  2>> $error_logs_file
 else
