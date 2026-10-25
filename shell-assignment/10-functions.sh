@@ -30,11 +30,11 @@ install_package(){
 
 }
 
-
+header
 for package in $*
 do
     dnf list installed $package &>> $logs_file
-    header
+   
     if [ $? -eq  0 ]; then
         dnf list installed $package &>> $logs_file
         install_package $? "$package is already installed"
