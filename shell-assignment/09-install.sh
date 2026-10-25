@@ -15,11 +15,9 @@ mkdir -p $logs_folder
 dnf list installed nginx &>> $logs_file
 if [ $? -ne  0 ]; then
     echo "GO and Install nginx"
-    dnf install nginx -y
+    dnf install nginx -y &>> $logs_file
     echo "nginx install successfully"
 else
-    echo "nginx installation failed"
-    exit 1
+    echo "nginx is already installed"
+    exit 0
 fi
-echo "nginx is already installed"
-exit 0
