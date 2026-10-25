@@ -24,12 +24,12 @@ validate(){
         echo -e "${2}... ${R}[FAILURE]${N}" 2>> $error_logs_file
         exit 1
     else
-        echo -e "${2} .... ${G}[SUCCEED]${N}" 
+        echo -e "${2} .... ${G}[SUCCEED]${N}" 1>> $success_logs_file
     fi
 
 }
 
-ls /tmpp  
+ls /tmp 
 validate $? "search .log folder"
    
 
