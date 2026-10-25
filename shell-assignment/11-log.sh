@@ -15,7 +15,8 @@ if [ "$user_id" -ne  0 ]; then
 
 fi 
 
-touch $success_logs_file $error_logs_file
+touch $success_logs_file 
+touch $error_logs_file
 
 # mkdir -p $success_folder_log 
 validate(){
