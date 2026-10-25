@@ -11,7 +11,7 @@ if [ "$user_id" -ne  0 ]; then
 fi
 mkdir -p $logs_folder
 
-header(){
+install_package(){
 
     if [ $1 -ne 0 ]; then
         echo "FAILURE: ${2}"
@@ -27,10 +27,11 @@ do
     dnf list installed $package &>> $logs_file
     if [ $? -eq  0 ]; then
         dnf list installed $package &>> $logs_file
-        header $? "$package is already installed"
+        install_package $? "$package is already installed"
         
     else
       
-        header $? "$package installation failed"
+        install_package $? "$package installation failed"
+        exit 1
     fi
 done
