@@ -1,6 +1,6 @@
 #!/bin/bash
 
-user_id=$(id -u)
+# user_id=$(id -u)
 success_folder_log="/tmp"
 success_logs_file="${success_folder_log}/script.log"
 error_logs_file="${success_folder_log}/script-error.log"
@@ -9,15 +9,14 @@ error_logs_file="${success_folder_log}/script-error.log"
 # Y="\e[33m"
 # N="\e[0m"
 
-if [ "$user_id" -ne  0 ]; then
-   echo "go with sudo root acces.."
-   exit 1
+# if [ "$user_id" -ne  0 ]; then
+#    echo "go with sudo root acces.."
+#    exit 1
 
-fi 
+# fi 
 
 touch $success_logs_file $error_logs_file
-chown -R $USER:$USER $success_logs_file
-chown -R $USER:$USER $error_logs_file
+
 # mkdir -p $success_folder_log 
 validate(){
 
