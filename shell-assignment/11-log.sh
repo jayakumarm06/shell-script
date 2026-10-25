@@ -29,7 +29,7 @@ validate(){
 
 }
 
-ls /tmpp
+ls /tmpp 1>> $success_logs_file | 2>> $eerror_logs_file 
 validate $? "search .log folder"
    
 
