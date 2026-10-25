@@ -24,7 +24,7 @@ validate(){
         echo -e "${2}... ${R}[FAILURE]${N}" 2>> $error_logs_file
         exit 1
     else
-        echo -e "${2} .... ${G}[SUCCEED]${N}" 1>> $success_logs_file
+        echo -e "${2} .... ${G}[SUCCEED]${N}" 
     fi
 
 }
