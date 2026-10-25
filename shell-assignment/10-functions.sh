@@ -18,7 +18,7 @@ header(){
 }
 
 
-for package in $@
+for package in $*
 do
     dnf list installed $package &>> $logs_file
     if [ $? -ne  0 ]; then
