@@ -39,3 +39,9 @@ validate $? "no dirfake"
 date 1>> $success_logs_file 2>> $error_logs_file
 validate $? "check date and time.."
 
+echo "=======Success logfiles===================="
+cat $success_logs_file
+echo "==============END=========================="
+echo "=======Error logfiles======================"
+cat $error_logs_file
+echo "==============END=========================="
