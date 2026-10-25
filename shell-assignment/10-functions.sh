@@ -26,10 +26,10 @@ for package in $*
 do
     dnf list installed $package &>> $logs_file
     if [ $? -ne  0 ]; then
-        echo "$package installation failed"
+        echo "header $? $package installation failed"
         exit 1
     else
-       echo "$package is already installed"
+       echo "header $? $package is already installed"
         
     fi
 done
