@@ -15,7 +15,7 @@ header(){
     
     echo "========================================"
     
-    echo "Installing packages"
+    echo "         Installing packages"
 
     echo "========================================"
 }
@@ -42,7 +42,6 @@ do
     else
       
         install_package $? "$package installation failed"
-        header
         exit 1
     fi
 done
