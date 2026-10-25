@@ -31,10 +31,10 @@ touch $success_logs_file $error_logs_file
 
 ls /tmp  
 if [ $? -ne 0 ]; then
-    echo "success" 1>> $success_logs_file
-else
     echo "failed"  2>> $error_logs_file
-
+else
+    echo "success" 1>> $success_logs_file
+fi
 
 # ls /fakedir
 # validate $? "ls /fakedir and checks if it.."
