@@ -25,12 +25,12 @@ header(){
 for package in $*
 do
     dnf list installed $package &>> $logs_file
-    if [ $? -ne  0 ]; then
+    if [ $? -eq  0 ]; then
         dnf list installed $package &>> $logs_file
-        header $? "$package installation failed"
+        header $? "$package is already installed"
         
     else
-       header $? "$package is already installed"
-        
+      
+        header $? "$package installation failed"
     fi
 done
