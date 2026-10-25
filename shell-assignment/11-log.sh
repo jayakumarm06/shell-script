@@ -29,8 +29,8 @@ validate(){
 
 }
 
-ls /tmp
-validate $? "failure go and search error-script.log"
+ls /tmpp
+validate $? "search .log folder"
    
 
 
