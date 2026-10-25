@@ -11,13 +11,15 @@ if [ "$user_id" -ne  0 ]; then
 fi
 
 mkdir -p $logs_folder
-
-dnf list installed nginx &>> $logs_file
-if [ $? -ne  0 ]; then
-    echo "GO and Install nginx"
-    dnf install nginx -y &>> $logs_file
-    echo "nginx install successfully"
-else
-    echo "nginx is already installed"
-    exit 0
-fi
+for package in $@
+do
+    dnf list installed $package &>> $logs_file
+    if [ $? -ne  0 ]; then
+        echo "GO and Install $package"
+        dnf install $package -y &>> $logs_file
+        echo "$package install successfully"
+    else
+        echo "$package is already installed"
+        exit 0
+    fi
+done
