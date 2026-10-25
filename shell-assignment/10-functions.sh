@@ -1,9 +1,13 @@
 #!/bin/bash
 
-
+user_id=$(id -u)
 logs_folder="/var/log/shell-assignment"
 logs_file="${logs_folder}/${0}.log"
 
+if [ "$user_id" -ne  0 ]; then
+   echo "go with sudo root acces.."
+   exit 1
+fi 
 
 mkdir -p $logs_folder
 
@@ -23,7 +27,7 @@ do
     dnf list installed $package &>> $logs_file
     if [ $? -ne  0 ]; then
         echo "GO and Install $package"
-        header $? "$package installation"
+        header $? "$package installation failed"
         
     else
         echo "$package is already installed"
