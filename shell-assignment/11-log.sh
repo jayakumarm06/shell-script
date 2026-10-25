@@ -2,7 +2,8 @@
 
 user_id=$(id -u)
 success_folder_log="/tmp"
-logs_file="${success_folder_log}/script.log"
+success_logs_file="${success_folder_log}/script.log"
+error_logs_file="${success_folder_log}/script-error.log"
 # R="\e[31m"
 # G="\e[32m"
 # Y="\e[33m"
@@ -14,7 +15,7 @@ if [ "$user_id" -ne  0 ]; then
 
 fi 
 
-touch $logs_file 
+touch $success_logs_file $error_logs_file
 
 # mkdir -p $success_folder_log 
 # validate(){
@@ -29,7 +30,11 @@ touch $logs_file
 # }
 
 ls /tmp  
-# validate $? "ls /tmp and checks if it.."
+if [ $? -ne 0 ]; then
+    echo "success" 1>> $success_logs_file
+else
+    echo "failed"  2>> $error_logs_file
+
 
 # ls /fakedir
 # validate $? "ls /fakedir and checks if it.."
