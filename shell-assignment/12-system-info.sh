@@ -38,7 +38,7 @@ timestamp(){
     date "+%F %T"
 }
 
-OS="$(cat /etc/os-release | grep PRETTY | awk -F "=" '{gsub(/"/,"",$2); print $2}'| awk -F '\\(' '{print $1})"
+OS="$(cat /etc/os-release | grep PRETTY | awk -F "=" '{gsub(/"/,"",$2); print $2}'| awk -F '\\(' '{print $1}')"
 disk="$(df -h / | awk 'NR==2 {print $2 " used of " $3}')"
 mem="$(free -h | awk '/^Mem:/ {print $2 " out of " $3}')"
 uptime="$(uptime | cut -d "," -f1 | awk '{print $2, " days, "$3}')"
