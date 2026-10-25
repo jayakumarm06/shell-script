@@ -26,11 +26,11 @@ for package in $*
 do
     dnf list installed $package &>> $logs_file
     if [ $? -ne  0 ]; then
-        echo "GO and Install $package"
-        header $? "$package installation"
+        echo "$package"
+        header $? "$package installation failed"
         
     else
-        echo "$package is already installed"
+        header $? "$package is already installed"
         
     fi
 done
