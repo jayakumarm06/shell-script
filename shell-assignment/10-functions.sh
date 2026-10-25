@@ -11,6 +11,15 @@ if [ "$user_id" -ne  0 ]; then
 fi
 mkdir -p $logs_folder
 
+header(){
+    
+    echo "========================================"
+    
+    echo "Installing packages"
+
+    echo "========================================"
+}
+
 install_package(){
 
     if [ $1 -ne 0 ]; then
@@ -28,10 +37,12 @@ do
     if [ $? -eq  0 ]; then
         dnf list installed $package &>> $logs_file
         install_package $? "$package is already installed"
+        header
         
     else
       
         install_package $? "$package installation failed"
+        header
         exit 1
     fi
 done
