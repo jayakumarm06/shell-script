@@ -27,7 +27,7 @@ do
     dnf list installed $package &>> $logs_file
     if [ $? -ne  0 ]; then
         header $? "$package installation failed"
-        exit 1
+        
     else
        header $? "$package is already installed"
         
