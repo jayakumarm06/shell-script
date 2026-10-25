@@ -27,7 +27,7 @@ mkdir -p $success_folder_log
 
 # }
 
-ls /tmp 1>> $logs_file
+ls /tmp/ 
 # validate $? "ls /tmp and checks if it.."
 
 # ls /fakedir
