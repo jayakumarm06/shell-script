@@ -18,22 +18,24 @@ fi
 touch $success_logs_file $error_logs_file
 
 # mkdir -p $success_folder_log 
-# validate(){
+validate(){
 
-#     if [ $1 -ne 0 ]; then
-#         echo -e "${2}... ${R}[FAILURE]${N}"
-#         # exit 1
-#     else
-#         echo -e "${2} .... ${G}[SUCCEED]${N}"
-#     fi
+    if [ $1 -ne 0 ]; then
+        echo -e "${2}... ${R}[FAILURE]${N}"
+        # exit 1
+    else
+        echo -e "${2} .... ${G}[SUCCEED]${N}"
+    fi
 
-# }
+}
 
-ls /tmpp  
+ls /tmp 
 if [ $? -ne 0 ]; then
-    echo "failed"  2>> $error_logs_file
+    echo "failed" 
+    validate $? "[error] go and search error-script.log"
 else
-    echo "success" 1>> $success_logs_file
+    echo "success" 
+    validate $? "[error] go and search script.log"
 fi
 
 # ls /fakedir
