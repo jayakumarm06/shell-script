@@ -36,6 +36,6 @@ validate $? "search .log folder"
 ls /fakedir 1>> $success_logs_file 2>> $error_logs_file
 validate $? "no dirfake"
 
-# ls /fakedir
-# validate $? "ls /fakedir and checks if it.."
+date 1>> $success_logs_file 2>> $error_logs_file
+validate $? "check date and time.."
 
