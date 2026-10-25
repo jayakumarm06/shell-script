@@ -14,9 +14,9 @@ mkdir -p $logs_folder
 header(){
 
     if [ $1 -ne 0 ]; then
-        echo "[FAILURE]: ${2}"
+        echo "FAILURE: ${2}"
     else
-        echo "[SUCCESS]: ${2}" 
+        echo "SUCCESS: ${2}" 
     fi
 
 }
