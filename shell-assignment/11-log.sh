@@ -32,7 +32,7 @@ validate(){
 ls /tmpp
 if [ $? -ne 0 ]; then
     validate $? "failure go and search error-script.log"
-    exit 1
+    
 else
 
     validate $? "success go and search script.log"
