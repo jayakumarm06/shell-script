@@ -20,6 +20,6 @@ if [ $? -ne  0 ]; then
 else
     echo "nginx installation failed"
     exit 1
-
+fi
 echo "nginx is already installed"
 exit 0
