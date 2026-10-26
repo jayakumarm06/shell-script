@@ -10,6 +10,6 @@ do
     if [ "$usage" -ge "$usage_threshold" ]; then
         message+="High Disk Usage on $partition:$usage \n"
 
-done <<< "$disk_usage"
+done <<< $disk_usage
 
 echo -e "$message"
